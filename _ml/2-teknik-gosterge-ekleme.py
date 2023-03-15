@@ -1,24 +1,48 @@
+import numpy as np
 import pandas as pd
-from ta.utils import dropna
-from ta.volatility import BollingerBands
+import matplotlib.pyplot as plt
+from datetime import datetime as date
+from matplotlib.pylab import rcParams
+
+import yfinance as yf
 
 
-# Load datas
-df = pd.read_csv('ta/tests/data/datas.csv', sep=',')
 
-# Clean NaN values
-df = dropna(df)
+from keras.models import Sequential
+from keras.layers import LSTM,Dropout,Dense
+from sklearn.preprocessing import MinMaxScaler
 
-# Initialize Bollinger Bands Indicator
-indicator_bb = BollingerBands(close=df["Close"], window=20, window_dev=2)
+rcParams['figure.figsize']=20,10
 
-# Add Bollinger Bands features
-df['bb_bbm'] = indicator_bb.bollinger_mavg()
-df['bb_bbh'] = indicator_bb.bollinger_hband()
-df['bb_bbl'] = indicator_bb.bollinger_lband()
 
-# Add Bollinger Band high indicator
-df['bb_bbhi'] = indicator_bb.bollinger_hband_indicator()
 
-# Add Bollinger Band low indicator
-df['bb_bbli'] = indicator_bb.bollinger_lband_indicator()
+
+today = date.today().strftime('%Y-%m-%d')
+# Burada yahoo finans kullanarak BİST30 -> XU030.IS verilerini inceleyebileceğiz. Herhangi ekstra dosya olmadan verileri alacağız.
+df = yf.download("XU030.IS", 
+                start="2020-09-22", 
+                end=today)
+                 
+
+print(df)
+
+
+"""
+df["Date"] = pd.to_datetime(df.index,format="%Y-%m-%d"!)
+print(df)
+
+df.index=df['Date']
+print(df)
+"""
+plt.figure(figsize=(16,8))
+plt.plot(df["Close"],label='Close Price history')
+plt.show()
+"""
+data=df.sort_index(ascending=True,axis=0)
+new_dataset=pd.DataFrame(index=range(0,len(df)),columns=['Date','Close']) 
+
+for i in range(0,len(data)):
+    new_dataset["Date"][i]=data['Date'][i]
+    new_dataset["Close"][i]=data["Close"][i]
+
+"""

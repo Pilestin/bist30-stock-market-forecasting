@@ -1,0 +1,12 @@
+streamlit==1.20
+yfinance
+matplotlib
+numpy 
+pandas==1.4.3
+plotly
+datetime
+sklearn==0.0
+ta ==0.10.2
+seaborn 
+keras
+tensorflow

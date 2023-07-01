@@ -1,12 +1,19 @@
+# hisse ve endeklerin getirilmesini sağlar.
+# Bu bilgileri bir listede tutar ve döndürür. 
+# request  ve bs4 ile borsa kaynağından çekildi. (doviz.com)
+
+
 import requests
 from bs4 import BeautifulSoup as BS
 
-_bist30 = {"BIST30":"XU030.IS", "BIST100":"XU100.IS",}
+# "Hisse Adı" : "Hisse Kodu
+_kisaltmalar = {"BIST30":"XU030.IS", "BIST100":"XU100.IS"}
 
-def getBistInfo():
+def getBistInfo() -> dict:
     """
         Bu fonksiyon url içerisindeki bist30 şirketlerinin isim ve kod bilgilerini döndürür.
     """
+    
     web_site = requests.get('https://borsa.doviz.com/hisseler').content
     soup = BS(web_site,'html.parser')
     
@@ -36,23 +43,17 @@ def getBistInfo():
             # . . . 
             # Ve bu bilgilerin ilkini alacağız 
             
-            hisse_kodu = hisse_bilgisi[0] + ".IS"              # listenin ilk elemanı hisse kodu
-            hisse_adi  = "".join(hisse_bilgisi[1:])    # listenin geri kalanı hisse ismi, string yapılmalı
-            _bist30[hisse_adi] = hisse_kodu             # ve dictionary yapısına eklenir
+            hisse_kodu = hisse_bilgisi[0] + ".IS"            # listenin ilk elemanı hisse kodu
+            hisse_adi  = "".join(hisse_bilgisi[1:])          # listenin geri kalanı hisse ismi, string yapılmalı
+            _kisaltmalar[hisse_adi] = hisse_kodu             # ve dictionary yapısına eklenir
+            
+            sayac += 1 
             
             if sayac==30:
                 break
-            sayac += 1 
             
     first30()
-    return _bist30
+    
+    return _kisaltmalar
 
 
-from datetime import datetime as date
-
-today = date.today().strftime('%Y-%m-%d')       # ["2023","3","20"] 
-_today = [int(i) for i in today.split("-")] 
-
-
-print(_today)
-print(today)

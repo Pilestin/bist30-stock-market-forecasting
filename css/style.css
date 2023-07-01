@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+html,
+body,
+[class*="css"] {
+  font-family: 'Roboto', sans-serif;
+}
+
+.kapanis-fiyati {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e7ebffa4;
+  border: 3px solid;
+  border-color: rgb(156, 156, 156);
+  color: rgb(65, 80, 104);
+  padding: 15px 0;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.kapanis-fiyati .gercek-fiyat {
+  font-size: 28px;
+  color: rgb(49, 57, 70);
+}
+
+.kapanis-fiyati:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border-color: rgb(0, 60, 119);
+  color: rgb(5, 9, 14);
+}
+
+.gercek-fiyat:hover{
+  color: rgb(5, 9, 14);
+}
+
+.model-tahmin-fiyati {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid ;
+  background-color: #41f81c;
+  border-color: rgb(156, 156, 156);
+  color: rgb(71, 45, 45);
+  /* rgb(110, 6, 6); 
+  #f78787;
+  */ 
+  padding: 15px 0;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.model-tahmin-fiyati .tahmin-fiyat {
+  font-size: 28px;
+  color: rgb(53, 50, 50);
+}
+
+.model-tahmin-fiyati:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgba(253, 216, 216, 0.97);
+  border-color: rgb(65, 0, 0);
+  color: rgb(51 65 85);
+}

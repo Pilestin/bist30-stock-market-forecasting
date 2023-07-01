@@ -13,9 +13,9 @@ import calendar
 from data.get_names import getBistInfo
 from data.BistIndicators import BistIndicators
 from data.CurrentData import CurrentData
-from models.lineer_regression import model_lineer_regression
-from models.neural_network import model_neural_network
-from models.lstm import model_lstm
+# from models.lineer_regression import model_lineer_regression
+# from models.neural_network import model_neural_network
+# from models.lstm import model_lstm
 # -------------------------------------
 from sklearn.preprocessing import MinMaxScaler 
 from sklearn.model_selection import train_test_split 
@@ -37,7 +37,7 @@ st.write("---")
 #   Key değerleri    : BİST hisse adları
 #   Values değerleri : BİST hisse kodları
 
-bist_dict = getBistInfo()
+bist_dict = getBistInfo() 
 
 hisse_adi = st.selectbox(
     'Lütfen hisse seçin : ',

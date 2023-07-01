@@ -8,7 +8,7 @@ This project was conducted as part of the Senior Project course in the Departmen
 
 # Predicting BIST30 Stock Market Prices with Machine Learning
 
-This project was conducted as part of the Senior Project course in the Department of Computer Engineering at Ondokuz Mayıs University. It is a group project where the closing price of BIST30 is attempted to be predicted using three different machine learning algorithms, and the results are shown in a web application.
+This project was conducted as part of the Final Project course in the Department of Computer Engineering at Ondokuz Mayıs University. It is a group project where the closing price of BIST30 is attempted to be predicted using three different machine learning algorithms, and the results are shown in a web application.
 
 ## Contents
 

@@ -1,4 +1,4 @@
-# Predicting BIST30 Stock Market Prices with Machine Learning
+# BIST30 Stock Market Forecasting with Machine Learning
 
 [TR - Türkçe](#makine-öğrenimi-ile-bist30-borsa-fiyat-tahmini)
 

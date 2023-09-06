@@ -73,8 +73,8 @@ The project can be accessed at . . . address. This address is created using a pr
 | Name | GitHub |
 |  -   |   -    |
 | Yasin Ünal  | https://github.com/Pilestin |
-| Berkin Aker | https://github.com/basoguz52 |
-| Oğuzhan Baş | https://github.com/BerkinAker |
+| Berkin Aker | https://github.com/BerkinAker |
+| Oğuzhan Baş | https://github.com/basoguz52 |
 
 
 
@@ -167,6 +167,6 @@ Proje . . . adresinden kullanılabilir. Bu adres private olan bir github reposu 
 | İsim | GitHub |
 |  -   |   -    |
 | Yasin Ünal  | https://github.com/Pilestin |
-| Berkin Aker | https://github.com/basoguz52 |
-| Oğuzhan Baş | https://github.com/BerkinAker |
+| Berkin Aker | https://github.com/BerkinAker |
+| Oğuzhan Baş | https://github.com/basoguz52 |
 
